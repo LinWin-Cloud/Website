@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LinWinCloud开源</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    </head>
+    <body class="bg">
+        <div id="load" class="load">
+            <h1>正在加载中... ...</h1>
+        </div>
+        <div align="center" id="page" style="display: none;">
+            <style>
+                .topdiv{
+                    width: 100%;
+                    height: 75px;
+                    background-color: rgba(255, 255, 255, 0.568);
+                    box-shadow: 0px 0px 20px black;
+                }
+                body
+                {
+                    margin: 0;
+                    padding: 0;
+                }
+                .bg
+                {
+                    width: 100%;
+                    bottom: 0;
+                    top: 0;
+                    position: absolute;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-image: url('https://github.com/LinWin-Cloud/Website/blob/main/img/main_1.jpg');
+                }
+                .logo
+                {
+                    background-image: url(https://avatars.githubusercontent.com/u/96580724?v=4);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 60px;
+                    height: 60px;
+                    float: left;
+                }
+                .topbtn
+                {
+                    width: 80px;
+                    height: 60px;
+                    background-color: white;
+                    box-shadow: 0px 0px 20px black;
+                    border: none;
+                    float: right;
+                    outline: none;
+                    border-radius: 10px;
+                    font-size: 20px;
+                }
+                .topbtn:hover{
+                    width: 120px;
+                    box-shadow: 0px 0px 20px rgb(0, 174, 255);
+                }
+                .topdiv:hover{
+                    box-shadow: 0px 0px 20px rgb(0, 174, 255);
+                }
+                .meau
+                {
+                    width: 300px;
+                    height: 500px;
+                    background-color: white;
+                    box-shadow: 0px 0px 20px black;
+                    position: absolute;
+                    display: none;
+                    border-radius: 10px;
+                }
+                .search
+                {
+                    width: 80%;
+                    height: 40px;
+                    outline: none;
+                    border-bottom: black solid 1px;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                }
+                .search:hover{
+                    border-bottom: rgb(0, 174, 255) solid 1px;
+                    box-shadow: 0px 5px 5px black;
+                }
+                .meaubtn
+                {
+                    width: 80%;
+                    height: 50px;
+                    background-color: rgb(243, 243, 243);
+                    border: none;
+                    outline: none;
+                    border-radius: 10px;
+                    margin-top: 10px;
+                }
+                .meaubtn:hover{
+                    box-shadow: 0px 0px 10px black;
+                    font-size: 20px;
+                }
+                .exitmeau{
+                    width: 40px;height: 40px;
+                    background-color: rgb(243, 243, 243);
+                    border: none;
+                    border-radius: 10px;
+                    float: left;
+                    outline: none;
+                }
+                .exitmeau:hover{
+                    background-color: rgba(255, 0, 0, 0.699);
+                    box-sizing: 0px 0px 10px red;
+                }
+            </style>
+            <script>
+                window.onload = function()
+                {
+                    var btn = document.getElementById("btn") ;
+                    var meau = document.getElementById("meau");
+                    var page = document.getElementById("page");
+                    var load = document.getElementById("load");
+                    var closemeau = document.getElementById("closemeau");
+                    closemeau.onclick = function()
+                    {
+                        meau.style.display = 'none';
+                    }
+                    load.style.display = 'none';
+                    var pagewidth = window.innerWidth;
+                    meau.style.left = pagewidth - 305 + 'px';
+                    page.style.display = 'block';
+                    btn.onclick = function(){
+                        meau.style.display = "block"
+                    }
+                }
+            </script>
+            <div class="topdiv">
+                <div style="width: 100%;height: 5px;"></div>
+                    <div class="logo"></div>
+                    <h2 style="color: rgb(0, 174, 255);float: left;">LinWinCloud</h2>
+                    <button class="topbtn" id="btn"><em>项目</em></button>
+                <br />
+            </div>
+        </div>
+        <div id="meau" class="meau" align="center">
+            <br />
+            <input id="search" class="search" placeholder="搜索项目" />
+            <div style="width: 100%;height: 20px;"></div>
+            <button class="meaubtn" onclick="window.location.href=''"><em>首页</em></button>
+            <button class="meaubtn" onclick="window.location.href=''"><em>项目</em></button>
+            <button class="meaubtn" onclick="window.location.href=''"><em>帮助</em></button>
+            <button class="meaubtn" onclick="window.location.href=''"><em>关注</em></button>
+            <div style="width: 100%;height: 138px;"></div>
+            <button class="exitmeau" id="closemeau">X</button>
+        </div>
+    </body>
+</html>
